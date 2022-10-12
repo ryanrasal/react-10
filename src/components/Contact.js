@@ -2,8 +2,8 @@ import React from 'react';
 
 // 1. add onClick to delete button, it needs to execute onPressDelete function
 
-const onPressDelete = () => {
-  // 2. define an alert() here with a random text
+const onPressDelete = (message) => {
+  alert(message)
 };
 
 const Contact = props => {
@@ -14,7 +14,7 @@ const Contact = props => {
         <h4>{props.email}</h4>
         <h4>{props.phone}</h4>
       </div>
-      {props.isDeletable ? <button>Delete</button> : null}
+      {props.isDeletable ? <button  onClick={() => onPressDelete('Supprimer le bouton ? ')}>Delete</button> : null}
     </div>
   );
 };
